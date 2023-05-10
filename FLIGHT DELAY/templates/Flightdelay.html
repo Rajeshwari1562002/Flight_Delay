@@ -1,0 +1,43 @@
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ ur1_for('static',filename="style/style/.css" )}}">
+    <script src="{{ur1_for('static', filename='style/delaypredict.js')}}"></script>
+    <title>Fligh Delay prediction</title>
+</head>
+<body id="flight-form">
+<h2 id="main-head" class="centered-head">FLIGHT DELAY PREDICTION</h2>
+img src="{{ur1_for('static', filename='stylesm/image/Flight.jpg')}}" id="bgimg"
+<form name="flightForm" action="/result" method="POST" traget="_blank">
+    <div id="form-content">
+        <div id="block1">
+            <div class="details-container">
+                <label for="fno" class="label-item">Enter the Flight Numper</label>
+                <br>
+                <input type="numper" id="fno" name="fno" class="text-input">
+            </div>
+            <div class="details-container">
+                <label for="month" class="label-item">Month</lable>
+                <br>
+                <input type="number" id="month" name="month" class="text_input" onblur="checkvalid('month');" placehoIder="">
+                <div class="alert-text" id="month-valid">Enter a valid month between 1 to 12.</div>
+            </div>    
+            <div class="detail-container">
+                <label for="daym" class="label-item">Day of Month</label>
+                <br>
+                <input type="number" id="daym" name="daym" class="text_input" onblur="checkvalid('daym');">
+                <div class="alert-text" id="daym-valid">Enter avalid day of month.</div>
+            </div>
+            <div class="detail-container">
+                <label for="dayw" class="label-item">Day of Week</label>
+                <br>
+                <input type="number" id="dayw" name="dayw" class="text_input" onblur="checkvalid('dayw');">
+                <div class="alert-text" id="dayw-valid">Enter a valid day between 1 to 7.</div>
+            </div>
+            <div class="detail-container">
+                <label for="org" class="label-item">Origin</label>
+                <br>        
+                
